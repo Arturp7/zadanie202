@@ -14,13 +14,12 @@ public class TekstOperation {
     }
 
     public boolean palindrom(String tekst) {
-        String[] words = null;
-        words = tekst.split(" ");
-       boolean equals = true;
-        for (int i = 0; i < words.length-1; i++) {
-           equals = new StringBuilder(words[i]).reverse().toString().equals(words[i]);
 
-        }
+       boolean equals = true;
+
+           equals = new StringBuilder(tekst).reverse().toString().equalsIgnoreCase(tekst);
+
+
         return equals;
     }
 
